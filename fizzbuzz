@@ -1,15 +1,21 @@
 #include <stdio.h>
 
 void jogarFizzBuzz(){
-	int i;
-	 for(i = 1; i <= 100; i++) {
-        if(i % 3 == 0 && i % 5 == 0) {
+	int multiplo1, multiplo2, contagem;
+	printf("Defina o primeiro multiplo (fizz): ");
+	scanf("%d", &multiplo1);
+	printf("Defina o segundo multiplo (buzz): ");
+	scanf("%d", &multiplo2);
+	printf("Defina o limite de contagem do fizzbuzz: ");
+	scanf("%d", &contagem);
+	 for(int i = 1; i <= contagem; i++) {
+        if(i % multiplo1 == 0 && i % multiplo2 == 0) {
             printf("FizzBuzz\n");
         } 
-        else if(i % 3 == 0) {
+        else if(i % multiplo1 == 0) {
             printf("Fizz\n");
         } 
-        else if(i % 5 == 0) {
+        else if(i % multiplo2 == 0) {
             printf("Buzz\n");
         } 
         else {
